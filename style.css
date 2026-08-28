@@ -23,7 +23,7 @@ h2 {
     padding-left: 20px;
 }
 
-
+/* Cores personalizadas para cada artista */
 .yago {
     color: #00E5FF;
 }
@@ -36,8 +36,8 @@ h2 {
     color: #FFD700;
 }
 
-
-. {
+/* Estrutura que organiza os vídeos em bloco */
+.lista-videos {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
