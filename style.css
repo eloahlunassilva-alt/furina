@@ -3,13 +3,13 @@ html {
 }
 
 body {
-    /* Fundo degradê dinâmico que muda conforme rola a página */
+    /* Fundo degradê dinâmico com cores mais claras e vivas */
     background: linear-gradient(
         180deg, 
-        #0b0d17 0%, 
-        #051c24 25%, 
-        #24051a 60%, 
-        #241e05 100%
+        #181a29 0%, 
+        #0a3342 25%, 
+        #420a30 60%, 
+        #3d310a 100%
     );
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
@@ -36,7 +36,7 @@ h1 {
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    background-color: rgba(11, 13, 23, 0.85);
+    background-color: rgba(24, 26, 41, 0.85);
     padding: 15px 0;
     z-index: 100;
     backdrop-filter: blur(8px);
