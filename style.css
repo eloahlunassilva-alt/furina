@@ -18,14 +18,42 @@ body {
     padding: 20px;
 }
 
-h1 {
-    font-family: 'Righteous', cursive;
-    color: #FF2A85;
-    font-size: 52px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+/* Título com Fonte Gótica e Animação Neon Dinâmica */
+.titulo-neon {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 60px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
     text-align: center;
-    text-shadow: 0 0 15px rgba(255, 42, 133, 0.6);
+    animation: neonCoresArtistas 8s infinite alternate ease-in-out;
+}
+
+/* Animação que transita entre as cores neon dos artistas */
+@keyframes neonCoresArtistas {
+    0% {
+        color: #00E5FF; /* Yago Opróprio */
+        text-shadow: 0 0 15px #00E5FF, 0 0 30px #00E5FF;
+    }
+20% {
+        color: #FF007F; /* KATSEYE */
+        text-shadow: 0 0 15px #FF007F, 0 0 30px #FF007F;
+    }
+40% {
+        color: #FFD700; /* 2zDinizz */
+        text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700;
+    }
+60% {
+        color: #FF3366; /* Duquesa */
+        text-shadow: 0 0 15px #FF3366, 0 0 30px #FF3366;
+    }
+80% {
+        color: #20B2AA; /* Kamaitachi */
+        text-shadow: 0 0 15px #20B2AA, 0 0 30px #20B2AA;
+    }
+100% {
+        color: #00FFAB; /* Gabriel o Pensador */
+        text-shadow: 0 0 15px #00FFAB, 0 0 30px #00FFAB;
+    }
 }
 
 .menu {
@@ -169,7 +197,7 @@ iframe:hover {
 
 @media (max-width: 600px) {
     body { padding: 10px; }
-    h1 { font-size: 36px; }
+    .titulo-neon { font-size: 40px; }
     .yago { font-size: 28px; }
     .katseye { font-size: 36px; }
     .dinizz { font-size: 28px; }
@@ -191,7 +219,6 @@ iframe:hover {
         padding-bottom: 15px;
     }
 
-    
     iframe {
         width: 260px;
         height: 160px;
