@@ -5,12 +5,12 @@ html {
 body {
     background: linear-gradient(
         180deg, 
-        #181a29 0%, 
-        #0a3342 20%, 
-        #420a30 40%, 
-        #3d310a 60%, 
+        #112621 0%, 
+        #181a29 20%, 
+        #0a3342 40%, 
+        #420a30 60%, 
         #3b1111 80%, 
-        #192b1a 100%
+        #112621 100%
     );
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
@@ -28,7 +28,6 @@ h1 {
     text-shadow: 0 0 15px rgba(255, 42, 133, 0.6);
 }
 
-/* Menu de Navegação Fixo no Topo */
 .menu {
     display: flex;
     justify-content: center;
@@ -37,7 +36,7 @@ h1 {
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    background-color: rgba(24, 26, 41, 0.85);
+    background-color: rgba(17, 38, 33, 0.9);
     padding: 15px 0;
     z-index: 100;
     backdrop-filter: blur(8px);
@@ -53,7 +52,6 @@ h1 {
     background-color: #2a2a35;
 }
 
-/* Botões com Efeito Neon no Menu */
 .btn-yago { color: #00E5FF; border: 1px solid #00E5FF; }
 .btn-yago:hover { transform: scale(1.1); box-shadow: 0 0 15px #00E5FF; background-color: #00E5FF; color: #000; }
 
@@ -68,6 +66,9 @@ h1 {
 
 .btn-kamaitachi { color: #20B2AA; border: 1px solid #20B2AA; }
 .btn-kamaitachi:hover { transform: scale(1.1); box-shadow: 0 0 15px #20B2AA; background-color: #20B2AA; color: #000; }
+
+.btn-gabriel { color: #00FFAB; border: 1px solid #00FFAB; }
+.btn-gabriel:hover { transform: scale(1.1); box-shadow: 0 0 15px #00FFAB; background-color: #00FFAB; color: #000; }
 
 h2 {
     margin-top: 35px;
@@ -124,7 +125,14 @@ h2 {
     text-shadow: 0 0 12px #20B2AA;
 }
 
-/* Estrutura e Molduras dos vídeos */
+.gabriel {
+    color: #00FFAB;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 48px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #00FFAB;
+}
+
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
@@ -146,6 +154,7 @@ iframe {
 .videos-dinizz iframe { border-color: #FFD700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
 .videos-duquesa iframe { border-color: #FF3366; box-shadow: 0 0 10px rgba(255, 51, 102, 0.4); }
 .videos-kamaitachi iframe { border-color: #20B2AA; box-shadow: 0 0 10px rgba(32, 178, 170, 0.4); }
+.videos-gabriel iframe { border-color: #00FFAB; box-shadow: 0 0 10px rgba(0, 255, 171, 0.4); }
 
 iframe:hover {
     transform: scale(1.05);
@@ -156,8 +165,8 @@ iframe:hover {
 .videos-dinizz iframe:hover { box-shadow: 0 0 20px #FFD700; }
 .videos-duquesa iframe:hover { box-shadow: 0 0 20px #FF3366; }
 .videos-kamaitachi iframe:hover { box-shadow: 0 0 20px #20B2AA; }
+.videos-gabriel iframe:hover { box-shadow: 0 0 20px #00FFAB; }
 
-/* Versão para Celular */
 @media (max-width: 600px) {
     body { padding: 10px; }
     h1 { font-size: 36px; }
@@ -166,6 +175,7 @@ iframe:hover {
     .dinizz { font-size: 28px; }
     .duquesa { font-size: 36px; }
     .kamaitachi { font-size: 34px; }
+    .gabriel { font-size: 36px; }
 
     h2 {
         text-align: left;
@@ -181,6 +191,7 @@ iframe:hover {
         padding-bottom: 15px;
     }
 
+    
     iframe {
         width: 260px;
         height: 160px;
