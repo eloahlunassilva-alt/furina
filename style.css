@@ -16,28 +16,31 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
     margin-top: 35px;
     margin-bottom: 15px;
     text-align: left;
     padding-left: 20px;
 }
 
-/* Fontes e estilos personalizados para cada artista */
+/* Fontes ajustadas com a vibe dos artistas */
 .yago {
     color: #00E5FF;
-    text-decoration: line-through; /* Risco no meio */
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    font-size: 30px;
 }
 
 .katseye {
     color: #FF007F;
-    font-family: 'UnifrakturMaguntia', cursive; /* Estilo Fraktur */
-    font-size: 34px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 28px;
 }
 
 .dinizz {
     color: #FFD700;
-    font-family: 'Rubik Glitch', system-ui; /* Estilo arranhado/glitch */
+    font-family: 'Rubik Glitch', system-ui;
     font-size: 32px;
 }
 
