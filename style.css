@@ -3,13 +3,15 @@ html {
 }
 
 body {
-    /* Fundo degradê dinâmico com cores mais claras e vivas */
+    /* Fundo degradê dinâmico ajustado para 5 artistas */
     background: linear-gradient(
         180deg, 
         #181a29 0%, 
-        #0a3342 25%, 
-        #420a30 60%, 
-        #3d310a 100%
+        #0a3342 20%, 
+        #420a30 40%, 
+        #3d310a 60%, 
+        #3b1111 80%, 
+        #192b1a 100%
     );
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
@@ -52,7 +54,7 @@ h1 {
     background-color: #2a2a35;
 }
 
-/* Botões com Efeito Neon */
+/* Botões com Efeito Neon no Menu */
 .btn-yago { color: #00E5FF; border: 1px solid #00E5FF; }
 .btn-yago:hover { transform: scale(1.1); box-shadow: 0 0 15px #00E5FF; background-color: #00E5FF; color: #000; }
 
@@ -61,6 +63,12 @@ h1 {
 
 .btn-dinizz { color: #FFD700; border: 1px solid #FFD700; }
 .btn-dinizz:hover { transform: scale(1.1); box-shadow: 0 0 15px #FFD700; background-color: #FFD700; color: #000; }
+
+.btn-duquesa { color: #FF3366; border: 1px solid #FF3366; }
+.btn-duquesa:hover { transform: scale(1.1); box-shadow: 0 0 15px #FF3366; background-color: #FF3366; color: #fff; }
+
+.btn-kamaitachi { color: #20B2AA; border: 1px solid #20B2AA; }
+.btn-kamaitachi:hover { transform: scale(1.1); box-shadow: 0 0 15px #20B2AA; background-color: #20B2AA; color: #000; }
 
 h2 {
     margin-top: 35px;
@@ -101,6 +109,22 @@ h2 {
     text-shadow: 0 0 10px #FFD700;
 }
 
+.duquesa {
+    color: #FF3366;
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px #FF3366;
+}
+
+.kamaitachi {
+    color: #20B2AA;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 46px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px #20B2AA;
+}
+
 /* Estrutura e Molduras dos vídeos */
 .lista-videos {
     display: flex;
@@ -121,6 +145,8 @@ iframe {
 .videos-yago iframe { border-color: #00E5FF; box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); }
 .videos-katseye iframe { border-color: #FF007F; box-shadow: 0 0 10px rgba(255, 0, 127, 0.4); }
 .videos-dinizz iframe { border-color: #FFD700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+.videos-duquesa iframe { border-color: #FF3366; box-shadow: 0 0 10px rgba(255, 51, 102, 0.4); }
+.videos-kamaitachi iframe { border-color: #20B2AA; box-shadow: 0 0 10px rgba(32, 178, 170, 0.4); }
 
 iframe:hover {
     transform: scale(1.05);
@@ -129,6 +155,8 @@ iframe:hover {
 .videos-yago iframe:hover { box-shadow: 0 0 20px #00E5FF; }
 .videos-katseye iframe:hover { box-shadow: 0 0 20px #FF007F; }
 .videos-dinizz iframe:hover { box-shadow: 0 0 20px #FFD700; }
+.videos-duquesa iframe:hover { box-shadow: 0 0 20px #FF3366; }
+.videos-kamaitachi iframe:hover { box-shadow: 0 0 20px #20B2AA; }
 
 /* Versão para Celular */
 @media (max-width: 600px) {
@@ -137,6 +165,8 @@ iframe:hover {
     .yago { font-size: 28px; }
     .katseye { font-size: 36px; }
     .dinizz { font-size: 28px; }
+    .duquesa { font-size: 32px; }
+    .kamaitachi { font-size: 34px; }
 
     h2 {
         text-align: left;
