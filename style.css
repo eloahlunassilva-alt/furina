@@ -110,8 +110,8 @@ h2 {
 
 .duquesa {
     color: #FF3366;
-    font-family: 'Eater', cursive;
-    font-size: 40px;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 48px;
     letter-spacing: 2px;
     text-shadow: 0 0 15px #FF3366;
 }
@@ -164,7 +164,7 @@ iframe:hover {
     .yago { font-size: 28px; }
     .katseye { font-size: 36px; }
     .dinizz { font-size: 28px; }
-    .duquesa { font-size: 30px; }
+    .duquesa { font-size: 36px; }
     .kamaitachi { font-size: 34px; }
 
     h2 {
