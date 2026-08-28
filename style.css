@@ -1,5 +1,11 @@
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+}
+
 body {
-    background-color: #18181c;
+    /* Fundo degradê noturno super bonito */
+    background: linear-gradient(135deg, #0d0d11 0%, #1f1b2e 100%);
+    background-attachment: fixed;
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -11,9 +17,36 @@ h1 {
     color: #FF2A85;
     font-size: 52px;
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
+
+/* Menu de Navegação no Topo */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.2s;
+    background-color: #2a2a35;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+}
+
+.btn-yago { color: #00E5FF; border: 1px solid #00E5FF; }
+.btn-katseye { color: #FF007F; border: 1px solid #FF007F; }
+.btn-dinizz { color: #FFD700; border: 1px solid #FFD700; }
 
 h2 {
     margin-top: 35px;
@@ -22,7 +55,6 @@ h2 {
     padding-left: 20px;
 }
 
-/* Estilos de cada artista */
 .yago {
     font-family: 'Bungee', cursive;
     font-size: 45px;
@@ -53,7 +85,7 @@ h2 {
     font-size: 32px;
 }
 
-/* Estrutura padrão para computadores */
+/* Estrutura dos vídeos */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
@@ -67,48 +99,40 @@ iframe {
     height: 200px;
     border-radius: 12px;
     border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* TRUQUE DO CARROSSEL DE LADO PARA CELULAR */
+/* Efeito ao passar o mouse ou tocar no vídeo */
+iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 42, 133, 0.4);
+}
+
+/* Versão para Celular */
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .yago {
-        font-size: 28px;
-    }
-
-    .katseye {
-        font-size: 32px;
-    }
-
-    .dinizz {
-        font-size: 26px;
-    }
+    body { padding: 10px; }
+    h1 { font-size: 36px; }
+    .yago { font-size: 28px; }
+    .katseye { font-size: 32px; }
+    .dinizz { font-size: 26px; }
 
     h2 {
         text-align: left;
         padding-left: 10px;
     }
 
-    /* Transforma a lista num carrossel para deslizar na horizontal */
     .lista-videos {
         display: flex;
-        flex-wrap: nowrap; /* Não joga os vídeos para baixo! */
-        overflow-x: auto; /* Permite rolar para o lado */
+        flex-wrap: nowrap;
+        overflow-x: auto;
         justify-content: flex-start;
         padding-left: 10px;
         padding-bottom: 15px;
     }
 
     iframe {
-        width: 260px; /* Tamanho ajustado para caber o vídeo perfeito de lado */
+        width: 260px;
         height: 160px;
-        flex-shrink: 0; /* Impede que o vídeo esprema */
+        flex-shrink: 0;
     }
 }
