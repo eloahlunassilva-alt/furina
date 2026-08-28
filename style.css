@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    /* Fundo degradê dinâmico ajustado para 5 artistas */
     background: linear-gradient(
         180deg, 
         #181a29 0%, 
@@ -111,10 +110,10 @@ h2 {
 
 .duquesa {
     color: #FF3366;
-    font-family: 'Cinzel', serif;
-    font-size: 42px;
-    letter-spacing: 3px;
-    text-shadow: 0 0 12px #FF3366;
+    font-family: 'Eater', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #FF3366;
 }
 
 .kamaitachi {
@@ -165,7 +164,7 @@ iframe:hover {
     .yago { font-size: 28px; }
     .katseye { font-size: 36px; }
     .dinizz { font-size: 28px; }
-    .duquesa { font-size: 32px; }
+    .duquesa { font-size: 30px; }
     .kamaitachi { font-size: 34px; }
 
     h2 {
