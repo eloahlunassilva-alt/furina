@@ -18,40 +18,59 @@ body {
     padding: 20px;
 }
 
-/* Título com Fonte Gótica e Animação Neon Dinâmica */
-.titulo-neon {
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 60px;
-    letter-spacing: 3px;
-    margin-bottom: 25px;
+/* Título em Estilo Nuvem Iluminada e Neon */
+.titulo-nuvem {
+    font-family: 'Fredoka', cursive;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 20px auto 35px auto;
     text-align: center;
-    animation: neonCoresArtistas 8s infinite alternate ease-in-out;
+    display: table;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
+
+    animation: nuvemFlutuante 4s infinite ease-in-out, neonCoresArtistas 8s infinite alternate ease-in-out;
 }
 
-/* Animação que transita entre as cores neon dos artistas */
+@keyframes nuvemFlutuante {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
 @keyframes neonCoresArtistas {
     0% {
-        color: #00E5FF; /* Yago Opróprio */
+        color: #00E5FF;
         text-shadow: 0 0 15px #00E5FF, 0 0 30px #00E5FF;
     }
-20% {
-        color: #FF007F; /* KATSEYE */
+    20% {
+        color: #FF007F;
         text-shadow: 0 0 15px #FF007F, 0 0 30px #FF007F;
     }
-40% {
-        color: #FFD700; /* 2zDinizz */
+    40% {
+        color: #FFD700;
         text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700;
     }
-60% {
-        color: #FF3366; /* Duquesa */
+    60% {
+        color: #FF3366;
         text-shadow: 0 0 15px #FF3366, 0 0 30px #FF3366;
     }
-80% {
-        color: #20B2AA; /* Kamaitachi */
+    80% {
+        color: #20B2AA;
         text-shadow: 0 0 15px #20B2AA, 0 0 30px #20B2AA;
     }
-100% {
-        color: #00FFAB; /* Gabriel o Pensador */
+    100% {
+        color: #00FFAB;
         text-shadow: 0 0 15px #00FFAB, 0 0 30px #00FFAB;
     }
 }
@@ -197,7 +216,7 @@ iframe:hover {
 
 @media (max-width: 600px) {
     body { padding: 10px; }
-    .titulo-neon { font-size: 40px; }
+    .titulo-nuvem { font-size: 34px; padding: 10px 25px; }
     .yago { font-size: 28px; }
     .katseye { font-size: 36px; }
     .dinizz { font-size: 28px; }
