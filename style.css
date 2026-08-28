@@ -22,16 +22,28 @@ h2 {
     padding-left: 20px;
 }
 
-/* Fontes personalizadas */
+/* Nome do Yago animado e ocupando a visão */
 .yago {
-    color: #00B4D8; /* Azul firme e sem brilho ofuscante */
-    font-family: 'Playfair Display', serif; /* Estilo marcante e excêntrico */
-    font-size: 32px;
+    font-family: 'Bungee', cursive;
+    font-size: 45px;
+    text-transform: uppercase;
+    animation: luzNeon 1.5s infinite alternate;
+}
+
+@keyframes luzNeon {
+    0% {
+        color: #00E5FF;
+        text-shadow: 0 0 10px #00E5FF, 0 0 20px #00E5FF;
+    }
+    100% {
+        color: #FF00E4;
+        text-shadow: 0 0 15px #FF00E4, 0 0 30px #FF00E4;
+    }
 }
 
 .katseye {
     color: #FF007F;
-    font-family: 'Great Vibes', cursive; /* Estilo caligrafia elegante */
+    font-family: 'Great Vibes', cursive;
     font-size: 38px;
 }
 
