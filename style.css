@@ -18,7 +18,22 @@ body {
     padding: 20px;
 }
 
-/* Título em Estilo Nuvem Iluminada e Neon */
+/* --- DEFINIÇÃO DE CORES E ESTILOS DOS ARTISTAS --- */
+.btn-yago, .yago, .videos-yago { --cor-artista: #00E5FF; }
+.btn-katseye, .katseye, .videos-katseye { --cor-artista: #FF007F; }
+.btn-dinizz, .dinizz, .videos-dinizz { --cor-artista: #FFD700; }
+.btn-duquesa, .duquesa, .videos-duquesa { --cor-artista: #FF3366; }
+.btn-kamaitachi, .kamaitachi, .videos-kamaitachi { --cor-artista: #20B2AA; }
+.btn-gabriel, .gabriel, .videos-gabriel { --cor-artista: #00FFAB; }
+
+.yago { font-family: 'Bungee', cursive; font-size: 45px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
+.katseye { font-family: 'Great Vibes', cursive; font-size: 48px; }
+.dinizz { font-family: 'Rubik Glitch', system-ui; font-size: 36px; }
+.duquesa { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
+.kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 46px; letter-spacing: 2px; }
+.gabriel { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
+
+/* --- TÍTULO PRINCIPAL --- */
 .titulo-nuvem {
     font-family: 'Fredoka', cursive;
     font-size: 50px;
@@ -40,41 +55,20 @@ body {
 }
 
 @keyframes nuvemFlutuante {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
 }
 
 @keyframes neonCoresArtistas {
-    0% {
-        color: #00E5FF;
-        text-shadow: 0 0 15px #00E5FF, 0 0 30px #00E5FF;
-    }
-    20% {
-        color: #FF007F;
-        text-shadow: 0 0 15px #FF007F, 0 0 30px #FF007F;
-    }
-    40% {
-        color: #FFD700;
-        text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700;
-    }
-    60% {
-        color: #FF3366;
-        text-shadow: 0 0 15px #FF3366, 0 0 30px #FF3366;
-    }
-    80% {
-        color: #20B2AA;
-        text-shadow: 0 0 15px #20B2AA, 0 0 30px #20B2AA;
-    }
-    100% {
-        color: #00FFAB;
-        text-shadow: 0 0 15px #00FFAB, 0 0 30px #00FFAB;
-    }
+    0% { color: #00E5FF; text-shadow: 0 0 15px #00E5FF, 0 0 30px #00E5FF; }
+    20% { color: #FF007F; text-shadow: 0 0 15px #FF007F, 0 0 30px #FF007F; }
+    40% { color: #FFD700; text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700; }
+    60% { color: #FF3366; text-shadow: 0 0 15px #FF3366, 0 0 30px #FF3366; }
+    80% { color: #20B2AA; text-shadow: 0 0 15px #20B2AA, 0 0 30px #20B2AA; }
+    100% { color: #00FFAB; text-shadow: 0 0 15px #00FFAB, 0 0 30px #00FFAB; }
 }
 
+/* --- MENU FIXO NO TOPO --- */
 .menu {
     display: flex;
     justify-content: center;
@@ -97,89 +91,34 @@ body {
     font-size: 14px;
     transition: all 0.3s ease;
     background-color: #2a2a35;
+    color: var(--cor-artista);
+    border: 1px solid var(--cor-artista);
 }
 
-.btn-yago { color: #00E5FF; border: 1px solid #00E5FF; }
-.btn-yago:hover { transform: scale(1.1); box-shadow: 0 0 15px #00E5FF; background-color: #00E5FF; color: #000; }
+.menu a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--cor-artista);
+    background-color: var(--cor-artista);
+    color: #000;
+}
 
-.btn-katseye { color: #FF007F; border: 1px solid #FF007F; }
-.btn-katseye:hover { transform: scale(1.1); box-shadow: 0 0 15px #FF007F; background-color: #FF007F; color: #fff; }
-
-.btn-dinizz { color: #FFD700; border: 1px solid #FFD700; }
-.btn-dinizz:hover { transform: scale(1.1); box-shadow: 0 0 15px #FFD700; background-color: #FFD700; color: #000; }
-
-.btn-duquesa { color: #FF3366; border: 1px solid #FF3366; }
-.btn-duquesa:hover { transform: scale(1.1); box-shadow: 0 0 15px #FF3366; background-color: #FF3366; color: #fff; }
-
-.btn-kamaitachi { color: #20B2AA; border: 1px solid #20B2AA; }
-.btn-kamaitachi:hover { transform: scale(1.1); box-shadow: 0 0 15px #20B2AA; background-color: #20B2AA; color: #000; }
-
-.btn-gabriel { color: #00FFAB; border: 1px solid #00FFAB; }
-.btn-gabriel:hover { transform: scale(1.1); box-shadow: 0 0 15px #00FFAB; background-color: #00FFAB; color: #000; }
-
+/* --- TÍTULOS DOS ARTISTAS --- */
 h2 {
     margin-top: 35px;
     margin-bottom: 15px;
     text-align: left;
     padding-left: 20px;
-}
-
-.yago {
-    font-family: 'Bungee', cursive;
-    font-size: 45px;
-    text-transform: uppercase;
-    animation: luzNeon 1.5s infinite alternate;
+    scroll-margin-top: 90px; /* Resolve o problema do menu cobrir o título! */
+    color: var(--cor-artista);
+    text-shadow: 0 0 12px var(--cor-artista);
 }
 
 @keyframes luzNeon {
-    0% {
-        color: #00E5FF;
-        text-shadow: 0 0 10px #00E5FF, 0 0 20px #00E5FF;
-    }
-    100% {
-        color: #FF00E4;
-        text-shadow: 0 0 15px #FF00E4, 0 0 30px #FF00E4;
-    }
+    0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF, 0 0 20px #00E5FF; }
+    100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4, 0 0 30px #FF00E4; }
 }
 
-.katseye {
-    color: #FF007F;
-    font-family: 'Great Vibes', cursive;
-    font-size: 48px;
-    text-shadow: 0 0 12px #FF007F;
-}
-
-.dinizz {
-    color: #FFD700;
-    font-family: 'Rubik Glitch', system-ui;
-    font-size: 36px;
-    text-shadow: 0 0 10px #FFD700;
-}
-
-.duquesa {
-    color: #FF3366;
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 48px;
-    letter-spacing: 2px;
-    text-shadow: 0 0 15px #FF3366;
-}
-
-.kamaitachi {
-    color: #20B2AA;
-    font-family: 'UnifrakturMaguntia', cursive;
-    font-size: 46px;
-    letter-spacing: 2px;
-    text-shadow: 0 0 12px #20B2AA;
-}
-
-.gabriel {
-    color: #00FFAB;
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 48px;
-    letter-spacing: 2px;
-    text-shadow: 0 0 15px #00FFAB;
-}
-
+/* --- VÍDEOS DOS ARTISTAS --- */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
@@ -196,24 +135,20 @@ iframe {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.videos-yago iframe { border-color: #00E5FF; box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); }
-.videos-katseye iframe { border-color: #FF007F; box-shadow: 0 0 10px rgba(255, 0, 127, 0.4); }
-.videos-dinizz iframe { border-color: #FFD700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
-.videos-duquesa iframe { border-color: #FF3366; box-shadow: 0 0 10px rgba(255, 51, 102, 0.4); }
-.videos-kamaitachi iframe { border-color: #20B2AA; box-shadow: 0 0 10px rgba(32, 178, 170, 0.4); }
-.videos-gabriel iframe { border-color: #00FFAB; box-shadow: 0 0 10px rgba(0, 255, 171, 0.4); }
+.lista-videos iframe {
+    border-color: var(--cor-artista);
+    box-shadow: 0 0 10px var(--cor-artista);
+}
 
 iframe:hover {
     transform: scale(1.05);
 }
 
-.videos-yago iframe:hover { box-shadow: 0 0 20px #00E5FF; }
-.videos-katseye iframe:hover { box-shadow: 0 0 20px #FF007F; }
-.videos-dinizz iframe:hover { box-shadow: 0 0 20px #FFD700; }
-.videos-duquesa iframe:hover { box-shadow: 0 0 20px #FF3366; }
-.videos-kamaitachi iframe:hover { box-shadow: 0 0 20px #20B2AA; }
-.videos-gabriel iframe:hover { box-shadow: 0 0 20px #00FFAB; }
+.lista-videos iframe:hover {
+    box-shadow: 0 0 20px var(--cor-artista);
+}
 
+/* --- RESPONSIVIDADE (CELULAR) --- */
 @media (max-width: 600px) {
     body { padding: 10px; }
     .titulo-nuvem { font-size: 34px; padding: 10px 25px; }
