@@ -34,7 +34,7 @@ body {
 
 .glitter-emojis span {
     position: absolute;
-    font-size: 26px;
+    font-size: 24px;
     opacity: 0.7;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
     animation: piscarEFlutuar 3s infinite alternate ease-in-out;
@@ -65,22 +65,22 @@ body {
 .btn-kamaitachi, .kamaitachi, .videos-kamaitachi, .card-kamaitachi { --cor-artista: #20B2AA; }
 .btn-gabriel, .gabriel, .videos-gabriel, .card-gabriel { --cor-artista: #00FFAB; }
 
-.yago { font-family: 'Bungee', cursive; font-size: 45px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
-.katseye { font-family: 'Great Vibes', cursive; font-size: 48px; }
-.dinizz { font-family: 'Rubik Glitch', system-ui; font-size: 36px; }
-.duquesa { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
-.kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 46px; letter-spacing: 2px; }
-.gabriel { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
+.yago { font-family: 'Bungee', cursive; font-size: 40px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
+.katseye { font-family: 'Great Vibes', cursive; font-size: 44px; }
+.dinizz { font-family: 'Rubik Glitch', system-ui; font-size: 32px; }
+.duquesa { font-family: 'UnifrakturCook', cursive; font-size: 44px; letter-spacing: 2px; }
+.kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 42px; letter-spacing: 2px; }
+.gabriel { font-family: 'UnifrakturCook', cursive; font-size: 44px; letter-spacing: 2px; }
 
 /* --- TÍTULO PRINCIPAL --- */
 .titulo-nuvem {
     font-family: 'Fredoka', cursive;
-    font-size: 50px;
+    font-size: 42px;
     letter-spacing: 2px;
-    margin: 20px auto 35px auto;
+    margin: 15px auto 30px auto;
     text-align: center;
     display: table;
-    padding: 15px 40px;
+    padding: 10px 30px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(8px);
@@ -108,23 +108,23 @@ body {
 .menu {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
+    gap: 10px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
     background-color: rgba(17, 38, 33, 0.9);
-    padding: 15px 0;
+    padding: 12px 0;
     z-index: 100;
     backdrop-filter: blur(8px);
 }
 
 .menu a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 8px 16px;
+    border-radius: 20px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     transition: all 0.3s ease;
     background-color: #2a2a35;
     color: var(--cor-artista);
@@ -132,21 +132,21 @@ body {
 }
 
 .menu a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px var(--cor-artista);
+    transform: scale(1.05);
+    box-shadow: 0 0 12px var(--cor-artista);
     background-color: var(--cor-artista);
     color: #000;
 }
 
 /* --- TÍTULOS DOS ARTISTAS --- */
 h2 {
-    margin-top: 35px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 12px;
     text-align: left;
     padding-left: 20px;
-    scroll-margin-top: 90px;
+    scroll-margin-top: 80px;
     color: var(--cor-artista);
-    text-shadow: 0 0 12px var(--cor-artista);
+    text-shadow: 0 0 10px var(--cor-artista);
     position: relative;
     z-index: 2;
 }
@@ -156,33 +156,33 @@ h2 {
     100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; }
 }
 
-/* --- CARTÕES COM CAPA DO VÍDEO NO FUNDO --- */
+/* --- CARTÕES COM CAPA DO VÍDEO NO FUNDO (TAMANHO MENOR) --- */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 15px;
-    padding: 20px;
+    gap: 12px;
+    padding: 15px 20px;
     position: relative;
     z-index: 2;
 }
 
 .card-video {
-    width: 300px;
-    height: 180px;
+    width: 220px;
+    height: 135px;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
-    border: 2px solid var(--cor-artista);
-    box-shadow: 0 0 12px var(--cor-artista);
+    border-radius: 10px;
+    border: 1.5px solid var(--cor-artista);
+    box-shadow: 0 0 8px var(--cor-artista);
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-video:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 22px var(--cor-artista);
+    transform: scale(1.04);
+    box-shadow: 0 0 15px var(--cor-artista);
 }
 
 .overlay-card {
@@ -193,9 +193,9 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     box-sizing: border-box;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     transition: background 0.3s ease;
 }
 
@@ -204,95 +204,96 @@ h2 {
 }
 
 .overlay-card span {
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 13px;
     text-align: center;
     color: #FFFFFF;
     text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
+/* LINK/BOTÃO PEQUENO */
 .overlay-card a {
     text-decoration: none;
     background-color: var(--cor-artista);
     color: #000000;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 13px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 11px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s, filter 0.2s;
 }
 
 .overlay-card a:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
     filter: brightness(1.2);
 }
 
 /* --- SEÇÃO DE BIOGRAFIAS --- */
 .secao-biografias {
-    margin-top: 60px;
+    margin-top: 50px;
     text-align: center;
     position: relative;
     z-index: 2;
 }
 
 .titulo-biografias {
-    font-size: 32px;
-    margin-bottom: 25px;
+    font-size: 28px;
+    margin-bottom: 20px;
     color: #FFFFFF;
 }
 
 .container-biografias {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     padding: 10px;
 }
 
 .card-bio {
     background-color: rgba(15, 15, 25, 0.85);
-    border: 2px solid var(--cor-artista);
-    border-radius: 15px;
-    padding: 20px;
-    width: 280px;
-    box-shadow: 0 0 15px var(--cor-artista);
+    border: 1.5px solid var(--cor-artista);
+    border-radius: 12px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 0 10px var(--cor-artista);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
 
 .card-bio:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px var(--cor-artista);
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px var(--cor-artista);
 }
 
 .card-bio h3 {
     color: var(--cor-artista);
     margin-top: 0;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .card-bio p {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.5;
     color: #E0E0E0;
 }
 
 /* --- RODAPÉ --- */
 .rodape {
-    margin-top: 80px;
-    padding: 25px;
+    margin-top: 60px;
+    padding: 20px;
     text-align: center;
     background: rgba(0, 0, 0, 0.6);
     border-top: 2px solid #00E5FF;
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0;
     position: relative;
     z-index: 2;
 }
 
 .rodape p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
 }
 
@@ -303,26 +304,26 @@ h2 {
 
 /* --- RESPONSIVIDADE (CELULAR) --- */
 @media (max-width: 600px) {
-    body { padding: 10px; }
-    .titulo-nuvem { font-size: 34px; padding: 10px 25px; }
-    .yago { font-size: 28px; }
-    .katseye { font-size: 36px; }
-    .dinizz { font-size: 28px; }
-    .duquesa { font-size: 36px; }
-    .kamaitachi { font-size: 34px; }
-    .gabriel { font-size: 36px; }
+    body { padding: 8px; }
+    .titulo-nuvem { font-size: 28px; padding: 8px 20px; }
+    .yago { font-size: 24px; }
+    .katseye { font-size: 30px; }
+    .dinizz { font-size: 24px; }
+    .duquesa { font-size: 30px; }
+    .kamaitachi { font-size: 28px; }
+    .gabriel { font-size: 30px; }
 
     .lista-videos {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
-        padding: 15px;
+        padding: 10px;
     }
 
     .card-video {
-        width: 250px;
-        height: 150px;
+        width: 180px;
+        height: 115px;
         flex-shrink: 0;
     }
 
