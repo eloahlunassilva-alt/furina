@@ -10,28 +10,28 @@ body {
     overflow-x: hidden;
 }
 
-/* EMOJIS DE FUNDO */
+/* EMOJIS / BRILHOS EM MAIOR QUANTIDADE */
 .glitter-emojis { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1; }
 .glitter-emojis span {
     position: absolute;
-    font-size: 24px;
+    font-size: 22px;
     opacity: 0.7;
-    animation: piscarEFlutuar 3s infinite alternate ease-in-out;
+    animation: piscarEFlutuar 2.5s infinite alternate ease-in-out;
 }
 
 @keyframes piscarEFlutuar {
-    0% { transform: translateY(0) scale(0.9); opacity: 0.3; filter: drop-shadow(0 0 4px #00e5ff); }
-    50% { opacity: 1; filter: drop-shadow(0 0 15px #ffd700); }
-    100% { transform: translateY(-12px) scale(1.1); opacity: 0.6; filter: drop-shadow(0 0 8px #ff007f); }
+    0% { transform: translateY(0) scale(0.8); opacity: 0.2; filter: drop-shadow(0 0 4px #00e5ff); }
+    50% { opacity: 1; filter: drop-shadow(0 0 12px #ffd700); }
+    100% { transform: translateY(-15px) scale(1.2); opacity: 0.8; filter: drop-shadow(0 0 8px #ff007f); }
 }
 
-/* VARIAVEIS DE CORES */
-.btn-yago, .yago, .card-yago { --cor-artista: #00E5FF; }
-.btn-katseye, .katseye, .card-katseye { --cor-artista: #FF007F; }
-.btn-dinizz, .dinizz, .card-dinizz { --cor-artista: #FFD700; }
-.btn-duquesa, .duquesa, .card-duquesa { --cor-artista: #FF3366; }
-.btn-kamaitachi, .kamaitachi, .card-kamaitachi { --cor-artista: #20B2AA; }
-.btn-gabriel, .gabriel, .card-gabriel { --cor-artista: #00FFAB; }
+/* CORES PERSONALIZADAS DOS ARTISTAS */
+.btn-yago, .yago, .videos-yago, .card-yago { --cor-artista: #00E5FF; }
+.btn-katseye, .katseye, .videos-katseye, .card-katseye { --cor-artista: #FF007F; }
+.btn-dinizz, .dinizz, .videos-dinizz, .card-dinizz { --cor-artista: #FFD700; }
+.btn-duquesa, .duquesa, .videos-duquesa, .card-duquesa { --cor-artista: #FF3366; }
+.btn-kamaitachi, .kamaitachi, .videos-kamaitachi, .card-kamaitachi { --cor-artista: #20B2AA; }
+.btn-gabriel, .gabriel, .videos-gabriel, .card-gabriel { --cor-artista: #00FFAB; }
 
 /* FONTES DOS ARTISTAS */
 .yago { font-family: 'Bungee', cursive; font-size: 45px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
@@ -40,7 +40,7 @@ body {
 .duquesa, .gabriel { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
 .kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 46px; letter-spacing: 2px; }
 
-/* TITULO NUVEM */
+/* TÍTULO NUVEM */
 .titulo-nuvem {
     font-family: 'Fredoka', cursive;
     font-size: 50px;
@@ -67,7 +67,7 @@ body {
     100% { color: #00FFAB; text-shadow: 0 0 15px #00FFAB; }
 }
 
-/* MENU */
+/* MENU DE NAVEGAÇÃO */
 .menu {
     display: flex;
     justify-content: center;
@@ -96,7 +96,7 @@ body {
 
 .menu a:hover { transform: scale(1.1); box-shadow: 0 0 15px var(--cor-artista); background: var(--cor-artista); color: #000; }
 
-/* TITULOS SECOES */
+/* TÍTULOS DOS ARTISTAS */
 h2 {
     margin: 35px 0 15px;
     padding-left: 20px;
@@ -109,7 +109,7 @@ h2 {
 
 @keyframes luzNeon { 0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF; } 100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; } }
 
-/* CARDS DE VIDEO (TAMANHO ORIGINAL VOLTOU) */
+/* CARDS DE VÍDEO COM NEON REFORÇADO */
 .lista-videos { display: flex; flex-wrap: wrap; gap: 15px; padding: 20px; position: relative; z-index: 2; }
 
 .card-video {
@@ -119,16 +119,19 @@ h2 {
     background-position: center;
     border-radius: 12px;
     border: 2px solid var(--cor-artista);
-    box-shadow: 0 0 12px var(--cor-artista);
+    box-shadow: 0 0 15px var(--cor-artista), inset 0 0 10px rgba(0,0,0,0.5); /* Neon restaurado */
     overflow: hidden;
     position: relative;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.card-video:hover { transform: scale(1.05); box-shadow: 0 0 22px var(--cor-artista); }
+.card-video:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 28px var(--cor-artista), 0 0 8px #fff; 
+}
 
 .overlay-card {
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
     display: flex;
@@ -139,7 +142,7 @@ h2 {
     box-sizing: border-box;
 }
 
-.card-video:hover .overlay-card { background: rgba(0, 0, 0, 0.4); }
+.card-video:hover .overlay-card { background: rgba(0, 0, 0, 0.35); }
 
 .overlay-card span { font-weight: 700; font-size: 16px; text-align: center; text-shadow: 0 2px 4px #000; }
 
@@ -151,6 +154,7 @@ h2 {
     border-radius: 20px;
     font-weight: bold;
     font-size: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
     transition: 0.2s;
 }
 
@@ -177,11 +181,11 @@ h2 {
 .card-bio h3 { color: var(--cor-artista); margin-top: 0; font-size: 22px; }
 .card-bio p { font-size: 14px; line-height: 1.6; color: #E0E0E0; }
 
-/* RODAPE */
+/* RODAPÉ */
 .rodape { margin-top: 80px; padding: 25px; text-align: center; background: rgba(0,0,0,0.6); border-top: 2px solid #00E5FF; position: relative; z-index: 2; }
 .rodape span { color: #FF007F; font-weight: 700; }
 
-/* CELULAR */
+/* ADAPTAÇÃO PARA CELULAR */
 @media (max-width: 600px) {
     .lista-videos { flex-wrap: nowrap; overflow-x: auto; }
     .card-video { width: 250px; height: 150px; flex-shrink: 0; }
