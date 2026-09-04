@@ -2,15 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Fundo do site transitando entre as cores temáticas dos artistas */
 body {
     background: linear-gradient(
         180deg, 
-        #112621 0%, 
-        #181a29 20%, 
-        #0a3342 40%, 
-        #420a30 60%, 
-        #3b1111 80%, 
-        #112621 100%
+        #002b30 0%,    /* Cor Yago (Azul Neon escurecido) */
+        #33001a 20%,   /* Cor Katseye (Rosa escurecido) */
+        #332b00 40%,   /* Cor 2zDinizz (Amarelo escurecido) */
+        #330a14 60%,   /* Cor Duquesa (Vermelho/Rosa escurecido) */
+        #062422 80%,   /* Cor Kamaitachi (Verde Água escurecido) */
+        #003322 100%   /* Cor Gabriel (Verde Menta escurecido) */
     );
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
