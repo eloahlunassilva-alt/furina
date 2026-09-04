@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Fundo do site transitando entre as cores temáticas dos artistas */
 body {
     background: linear-gradient(
         180deg, 
@@ -19,10 +18,11 @@ body {
     padding: 20px;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* --- BRILHOS FIXOS QUE COBREM A TELA INTEIRA E APENAS PISCAM --- */
-.glitter-fundo {
+/* --- EMOJIS DOS ARTISTAS BRILHANDO E FLUTUANDO --- */
+.glitter-emojis {
     position: fixed;
     top: 0;
     left: 0;
@@ -30,40 +30,34 @@ body {
     height: 100vh;
     pointer-events: none;
     z-index: 1;
-
-    /* Padrão radial de estrelas/brilhos distribuídos por toda a extensão */
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 40px 70px, #ffd700, rgba(0,0,0,0)),
-        radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 160px 120px, #ff007f, rgba(0,0,0,0)),
-        radial-gradient(2.5px 2.5px at 230px 190px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 310px 80px, #00e5ff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 380px 240px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(1.5px 1.5px at 450px 60px, #ffd700, rgba(0,0,0,0));
-    
-    background-repeat: repeat;
-    background-size: 500px 300px;
-    opacity: 0.8;
-    animation: piscarBrilhosTela 2.5s infinite alternate ease-in-out;
 }
 
-@keyframes piscarBrilhosTela {
+.glitter-emojis span {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    animation: piscarEFlutuar 3s infinite alternate ease-in-out;
+}
+
+@keyframes piscarEFlutuar {
     0% {
+        transform: translateY(0px) scale(0.9);
         opacity: 0.3;
-        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+        filter: drop-shadow(0 0 4px #00e5ff);
     }
     50% {
-        opacity: 0.9;
-        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+        opacity: 1;
+        filter: drop-shadow(0 0 15px #ffd700);
     }
     100% {
-        opacity: 0.4;
-        filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+        transform: translateY(-12px) scale(1.1);
+        opacity: 0.5;
+        filter: drop-shadow(0 0 8px #ff007f);
     }
 }
 
-/* --- DEFINIÇÃO DE CORES E ESTILOS DOS ARTISTAS --- */
+/* --- CORES DOS ARTISTAS --- */
 .btn-yago, .yago, .videos-yago, .card-yago { --cor-artista: #00E5FF; }
 .btn-katseye, .katseye, .videos-katseye, .card-katseye { --cor-artista: #FF007F; }
 .btn-dinizz, .dinizz, .videos-dinizz, .card-dinizz { --cor-artista: #FFD700; }
@@ -92,12 +86,7 @@ body {
     backdrop-filter: blur(8px);
     position: relative;
     z-index: 2;
-    
-    box-shadow: 
-        0 0 20px rgba(255, 255, 255, 0.4),
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 0 15px rgba(255, 255, 255, 0.2);
-
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 8px 32px rgba(0, 0, 0, 0.3);
     animation: nuvemFlutuante 4s infinite ease-in-out, neonCoresArtistas 8s infinite alternate ease-in-out;
 }
 
@@ -107,15 +96,15 @@ body {
 }
 
 @keyframes neonCoresArtistas {
-    0% { color: #00E5FF; text-shadow: 0 0 15px #00E5FF, 0 0 30px #00E5FF; }
-    20% { color: #FF007F; text-shadow: 0 0 15px #FF007F, 0 0 30px #FF007F; }
-    40% { color: #FFD700; text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700; }
-    60% { color: #FF3366; text-shadow: 0 0 15px #FF3366, 0 0 30px #FF3366; }
-    80% { color: #20B2AA; text-shadow: 0 0 15px #20B2AA, 0 0 30px #20B2AA; }
-    100% { color: #00FFAB; text-shadow: 0 0 15px #00FFAB, 0 0 30px #00FFAB; }
+    0% { color: #00E5FF; text-shadow: 0 0 15px #00E5FF; }
+    20% { color: #FF007F; text-shadow: 0 0 15px #FF007F; }
+    40% { color: #FFD700; text-shadow: 0 0 15px #FFD700; }
+    60% { color: #FF3366; text-shadow: 0 0 15px #FF3366; }
+    80% { color: #20B2AA; text-shadow: 0 0 15px #20B2AA; }
+    100% { color: #00FFAB; text-shadow: 0 0 15px #00FFAB; }
 }
 
-/* --- MENU FIXO NO TOPO --- */
+/* --- MENU --- */
 .menu {
     display: flex;
     justify-content: center;
@@ -163,11 +152,11 @@ h2 {
 }
 
 @keyframes luzNeon {
-    0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF, 0 0 20px #00E5FF; }
-    100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4, 0 0 30px #FF00E4; }
+    0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF; }
+    100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; }
 }
 
-/* --- VÍDEOS DOS ARTISTAS --- */
+/* --- CARTÕES DE VÍDEOS DE MÚSICA --- */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
@@ -178,26 +167,46 @@ h2 {
     z-index: 2;
 }
 
-iframe {
-    width: 320px;
-    height: 200px;
+.card-video {
+    background: rgba(20, 20, 30, 0.85);
+    border: 2px solid var(--cor-artista);
     border-radius: 12px;
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    z-index: 2;
-}
-
-.lista-videos iframe {
-    border-color: var(--cor-artista);
+    padding: 15px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 0 10px var(--cor-artista);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-iframe:hover {
+.card-video:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px var(--cor-artista);
 }
 
-.lista-videos iframe:hover {
-    box-shadow: 0 0 20px var(--cor-artista);
+.card-video span {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+.card-video a {
+    text-decoration: none;
+    background-color: var(--cor-artista);
+    color: #000000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.card-video a:hover {
+    filter: brightness(1.2);
 }
 
 /* --- SEÇÃO DE BIOGRAFIAS --- */
@@ -212,7 +221,6 @@ iframe:hover {
     font-size: 32px;
     margin-bottom: 25px;
     color: #FFFFFF;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .container-biografias {
@@ -243,7 +251,6 @@ iframe:hover {
     color: var(--cor-artista);
     margin-top: 0;
     font-size: 22px;
-    text-shadow: 0 0 8px var(--cor-artista);
 }
 
 .card-bio p {
@@ -252,7 +259,7 @@ iframe:hover {
     color: #E0E0E0;
 }
 
-/* --- RODAPÉ PERSONALIZADO --- */
+/* --- RODAPÉ --- */
 .rodape {
     margin-top: 80px;
     padding: 25px;
@@ -273,7 +280,6 @@ iframe:hover {
 .rodape span {
     color: #FF007F;
     font-weight: 700;
-    text-shadow: 0 0 10px #FF007F;
 }
 
 /* --- RESPONSIVIDADE (CELULAR) --- */
@@ -287,11 +293,6 @@ iframe:hover {
     .kamaitachi { font-size: 34px; }
     .gabriel { font-size: 36px; }
 
-    h2 {
-        text-align: left;
-        padding-left: 10px;
-    }
-
     .lista-videos {
         display: flex;
         flex-wrap: nowrap;
@@ -300,9 +301,8 @@ iframe:hover {
         padding: 15px;
     }
 
-    iframe {
-        width: 260px;
-        height: 160px;
+    .card-video {
+        width: 200px;
         flex-shrink: 0;
     }
 
