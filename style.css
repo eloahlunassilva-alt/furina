@@ -1,100 +1,63 @@
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-    background: linear-gradient(
-        180deg, 
-        #002b30 0%,    
-        #33001a 20%,   
-        #332b00 40%,   
-        #330a14 60%,   
-        #062422 80%,   
-        #003322 100%   
-    );
-    color: #FFFFFF;
+    background: linear-gradient(180deg, #002b30 0%, #33001a 20%, #332b00 40%, #330a14 60%, #062422 80%, #003322 100%);
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
-    position: relative;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-/* --- EMOJIS DOS ARTISTAS BRILHANDO E FLUTUANDO --- */
-.glitter-emojis {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 1;
-}
-
+/* EMOJIS DE FUNDO */
+.glitter-emojis { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1; }
 .glitter-emojis span {
     position: absolute;
     font-size: 24px;
     opacity: 0.7;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
     animation: piscarEFlutuar 3s infinite alternate ease-in-out;
 }
 
 @keyframes piscarEFlutuar {
-    0% {
-        transform: translateY(0px) scale(0.9);
-        opacity: 0.3;
-        filter: drop-shadow(0 0 4px #00e5ff);
-    }
-    50% {
-        opacity: 1;
-        filter: drop-shadow(0 0 15px #ffd700);
-    }
-    100% {
-        transform: translateY(-12px) scale(1.1);
-        opacity: 0.6;
-        filter: drop-shadow(0 0 8px #ff007f);
-    }
+    0% { transform: translateY(0) scale(0.9); opacity: 0.3; filter: drop-shadow(0 0 4px #00e5ff); }
+    50% { opacity: 1; filter: drop-shadow(0 0 15px #ffd700); }
+    100% { transform: translateY(-12px) scale(1.1); opacity: 0.6; filter: drop-shadow(0 0 8px #ff007f); }
 }
 
-/* --- CORES DOS ARTISTAS --- */
-.btn-yago, .yago, .videos-yago, .card-yago { --cor-artista: #00E5FF; }
-.btn-katseye, .katseye, .videos-katseye, .card-katseye { --cor-artista: #FF007F; }
-.btn-dinizz, .dinizz, .videos-dinizz, .card-dinizz { --cor-artista: #FFD700; }
-.btn-duquesa, .duquesa, .videos-duquesa, .card-duquesa { --cor-artista: #FF3366; }
-.btn-kamaitachi, .kamaitachi, .videos-kamaitachi, .card-kamaitachi { --cor-artista: #20B2AA; }
-.btn-gabriel, .gabriel, .videos-gabriel, .card-gabriel { --cor-artista: #00FFAB; }
+/* VARIAVEIS DE CORES */
+.btn-yago, .yago, .card-yago { --cor-artista: #00E5FF; }
+.btn-katseye, .katseye, .card-katseye { --cor-artista: #FF007F; }
+.btn-dinizz, .dinizz, .card-dinizz { --cor-artista: #FFD700; }
+.btn-duquesa, .duquesa, .card-duquesa { --cor-artista: #FF3366; }
+.btn-kamaitachi, .kamaitachi, .card-kamaitachi { --cor-artista: #20B2AA; }
+.btn-gabriel, .gabriel, .card-gabriel { --cor-artista: #00FFAB; }
 
-.yago { font-family: 'Bungee', cursive; font-size: 40px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
-.katseye { font-family: 'Great Vibes', cursive; font-size: 44px; }
-.dinizz { font-family: 'Rubik Glitch', system-ui; font-size: 32px; }
-.duquesa { font-family: 'UnifrakturCook', cursive; font-size: 44px; letter-spacing: 2px; }
-.kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 42px; letter-spacing: 2px; }
-.gabriel { font-family: 'UnifrakturCook', cursive; font-size: 44px; letter-spacing: 2px; }
+/* FONTES DOS ARTISTAS */
+.yago { font-family: 'Bungee', cursive; font-size: 45px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
+.katseye { font-family: 'Great Vibes', cursive; font-size: 48px; }
+.dinizz { font-family: 'Rubik Glitch', system-ui; font-size: 36px; }
+.duquesa, .gabriel { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
+.kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 46px; letter-spacing: 2px; }
 
-/* --- TÍTULO PRINCIPAL --- */
+/* TITULO NUVEM */
 .titulo-nuvem {
     font-family: 'Fredoka', cursive;
-    font-size: 42px;
-    letter-spacing: 2px;
-    margin: 15px auto 30px auto;
+    font-size: 50px;
+    margin: 20px auto 35px;
     text-align: center;
     display: table;
-    padding: 10px 30px;
+    padding: 15px 40px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(8px);
     position: relative;
     z-index: 2;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
     animation: nuvemFlutuante 4s infinite ease-in-out, neonCoresArtistas 8s infinite alternate ease-in-out;
 }
 
-@keyframes nuvemFlutuante {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
-}
-
+@keyframes nuvemFlutuante { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @keyframes neonCoresArtistas {
     0% { color: #00E5FF; text-shadow: 0 0 15px #00E5FF; }
     20% { color: #FF007F; text-shadow: 0 0 15px #FF007F; }
@@ -104,86 +67,65 @@ body {
     100% { color: #00FFAB; text-shadow: 0 0 15px #00FFAB; }
 }
 
-/* --- MENU --- */
+/* MENU */
 .menu {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 15px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
     position: sticky;
     top: 0;
-    background-color: rgba(17, 38, 33, 0.9);
-    padding: 12px 0;
+    background: rgba(17, 38, 33, 0.9);
+    padding: 15px 0;
     z-index: 100;
     backdrop-filter: blur(8px);
 }
 
 .menu a {
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
     font-weight: 600;
-    font-size: 13px;
-    transition: all 0.3s ease;
-    background-color: #2a2a35;
+    font-size: 14px;
+    transition: 0.3s;
+    background: #2a2a35;
     color: var(--cor-artista);
     border: 1px solid var(--cor-artista);
 }
 
-.menu a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 12px var(--cor-artista);
-    background-color: var(--cor-artista);
-    color: #000;
-}
+.menu a:hover { transform: scale(1.1); box-shadow: 0 0 15px var(--cor-artista); background: var(--cor-artista); color: #000; }
 
-/* --- TÍTULOS DOS ARTISTAS --- */
+/* TITULOS SECOES */
 h2 {
-    margin-top: 30px;
-    margin-bottom: 12px;
-    text-align: left;
+    margin: 35px 0 15px;
     padding-left: 20px;
-    scroll-margin-top: 80px;
+    scroll-margin-top: 90px;
     color: var(--cor-artista);
-    text-shadow: 0 0 10px var(--cor-artista);
+    text-shadow: 0 0 12px var(--cor-artista);
     position: relative;
     z-index: 2;
 }
 
-@keyframes luzNeon {
-    0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF; }
-    100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; }
-}
+@keyframes luzNeon { 0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF; } 100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; } }
 
-/* --- CARTÕES COM CAPA DO VÍDEO NO FUNDO (TAMANHO MENOR) --- */
-.lista-videos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 12px;
-    padding: 15px 20px;
-    position: relative;
-    z-index: 2;
-}
+/* CARDS DE VIDEO (TAMANHO ORIGINAL VOLTOU) */
+.lista-videos { display: flex; flex-wrap: wrap; gap: 15px; padding: 20px; position: relative; z-index: 2; }
 
 .card-video {
-    width: 220px;
-    height: 135px;
+    width: 300px;
+    height: 180px;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
-    border: 1.5px solid var(--cor-artista);
-    box-shadow: 0 0 8px var(--cor-artista);
+    border-radius: 12px;
+    border: 2px solid var(--cor-artista);
+    box-shadow: 0 0 12px var(--cor-artista);
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
-.card-video:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 15px var(--cor-artista);
-}
+.card-video:hover { transform: scale(1.05); box-shadow: 0 0 22px var(--cor-artista); }
 
 .overlay-card {
     background: rgba(0, 0, 0, 0.65);
@@ -193,141 +135,55 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     box-sizing: border-box;
-    backdrop-filter: blur(1px);
-    transition: background 0.3s ease;
 }
 
-.card-video:hover .overlay-card {
-    background: rgba(0, 0, 0, 0.4);
-}
+.card-video:hover .overlay-card { background: rgba(0, 0, 0, 0.4); }
 
-.overlay-card span {
-    font-weight: 600;
-    font-size: 13px;
-    text-align: center;
-    color: #FFFFFF;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
-}
+.overlay-card span { font-weight: 700; font-size: 16px; text-align: center; text-shadow: 0 2px 4px #000; }
 
-/* LINK/BOTÃO PEQUENO */
 .overlay-card a {
     text-decoration: none;
-    background-color: var(--cor-artista);
-    color: #000000;
-    padding: 5px 12px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 11px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s, filter 0.2s;
+    background: var(--cor-artista);
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.2s;
 }
 
-.overlay-card a:hover {
-    transform: scale(1.08);
-    filter: brightness(1.2);
-}
+.overlay-card a:hover { transform: scale(1.1); filter: brightness(1.2); }
 
-/* --- SEÇÃO DE BIOGRAFIAS --- */
-.secao-biografias {
-    margin-top: 50px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
+/* BIOGRAFIAS */
+.secao-biografias { margin-top: 60px; text-align: center; position: relative; z-index: 2; }
+.titulo-biografias { font-size: 32px; margin-bottom: 25px; }
 
-.titulo-biografias {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #FFFFFF;
-}
-
-.container-biografias {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    padding: 10px;
-}
+.container-biografias { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 
 .card-bio {
-    background-color: rgba(15, 15, 25, 0.85);
-    border: 1.5px solid var(--cor-artista);
-    border-radius: 12px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0 0 10px var(--cor-artista);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-}
-
-.card-bio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 18px var(--cor-artista);
-}
-
-.card-bio h3 {
-    color: var(--cor-artista);
-    margin-top: 0;
-    font-size: 18px;
-}
-
-.card-bio p {
-    font-size: 13px;
-    line-height: 1.5;
-    color: #E0E0E0;
-}
-
-/* --- RODAPÉ --- */
-.rodape {
-    margin-top: 60px;
+    background: rgba(15, 15, 25, 0.85);
+    border: 2px solid var(--cor-artista);
+    border-radius: 15px;
     padding: 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6);
-    border-top: 2px solid #00E5FF;
-    border-radius: 15px 15px 0 0;
-    position: relative;
-    z-index: 2;
+    width: 280px;
+    box-shadow: 0 0 15px var(--cor-artista);
+    text-align: left;
+    transition: 0.3s;
 }
 
-.rodape p {
-    margin: 0;
-    font-size: 14px;
-    color: #FFFFFF;
-}
+.card-bio:hover { transform: translateY(-8px); box-shadow: 0 0 25px var(--cor-artista); }
+.card-bio h3 { color: var(--cor-artista); margin-top: 0; font-size: 22px; }
+.card-bio p { font-size: 14px; line-height: 1.6; color: #E0E0E0; }
 
-.rodape span {
-    color: #FF007F;
-    font-weight: 700;
-}
+/* RODAPE */
+.rodape { margin-top: 80px; padding: 25px; text-align: center; background: rgba(0,0,0,0.6); border-top: 2px solid #00E5FF; position: relative; z-index: 2; }
+.rodape span { color: #FF007F; font-weight: 700; }
 
-/* --- RESPONSIVIDADE (CELULAR) --- */
+/* CELULAR */
 @media (max-width: 600px) {
-    body { padding: 8px; }
-    .titulo-nuvem { font-size: 28px; padding: 8px 20px; }
-    .yago { font-size: 24px; }
-    .katseye { font-size: 30px; }
-    .dinizz { font-size: 24px; }
-    .duquesa { font-size: 30px; }
-    .kamaitachi { font-size: 28px; }
-    .gabriel { font-size: 30px; }
-
-    .lista-videos {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 10px;
-    }
-
-    .card-video {
-        width: 180px;
-        height: 115px;
-        flex-shrink: 0;
-    }
-
-    .card-bio {
-        width: 100%;
-    }
+    .lista-videos { flex-wrap: nowrap; overflow-x: auto; }
+    .card-video { width: 250px; height: 150px; flex-shrink: 0; }
+    .card-bio { width: 100%; }
 }
