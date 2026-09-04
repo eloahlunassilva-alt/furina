@@ -10,7 +10,7 @@ body {
     overflow-x: hidden;
 }
 
-/* EMOJIS / BRILHOS EM MAIOR QUANTIDADE */
+/* EMOJIS DE FUNDO */
 .glitter-emojis { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 1; }
 .glitter-emojis span {
     position: absolute;
@@ -25,7 +25,7 @@ body {
     100% { transform: translateY(-15px) scale(1.2); opacity: 0.8; filter: drop-shadow(0 0 8px #ff007f); }
 }
 
-/* CORES PERSONALIZADAS DOS ARTISTAS */
+/* VARIAVEIS DE CORES */
 .btn-yago, .yago, .videos-yago, .card-yago { --cor-artista: #00E5FF; }
 .btn-katseye, .katseye, .videos-katseye, .card-katseye { --cor-artista: #FF007F; }
 .btn-dinizz, .dinizz, .videos-dinizz, .card-dinizz { --cor-artista: #FFD700; }
@@ -40,7 +40,7 @@ body {
 .duquesa, .gabriel { font-family: 'UnifrakturCook', cursive; font-size: 48px; letter-spacing: 2px; }
 .kamaitachi { font-family: 'UnifrakturMaguntia', cursive; font-size: 46px; letter-spacing: 2px; }
 
-/* TÍTULO NUVEM */
+/* TITULO NUVEM */
 .titulo-nuvem {
     font-family: 'Fredoka', cursive;
     font-size: 50px;
@@ -96,7 +96,7 @@ body {
 
 .menu a:hover { transform: scale(1.1); box-shadow: 0 0 15px var(--cor-artista); background: var(--cor-artista); color: #000; }
 
-/* TÍTULOS DOS ARTISTAS */
+/* TITULOS */
 h2 {
     margin: 35px 0 15px;
     padding-left: 20px;
@@ -109,7 +109,7 @@ h2 {
 
 @keyframes luzNeon { 0% { color: #00E5FF; text-shadow: 0 0 10px #00E5FF; } 100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; } }
 
-/* CARDS DE VÍDEO COM NEON REFORÇADO */
+/* CARDS DE VIDEO */
 .lista-videos { display: flex; flex-wrap: wrap; gap: 15px; padding: 20px; position: relative; z-index: 2; }
 
 .card-video {
@@ -119,7 +119,7 @@ h2 {
     background-position: center;
     border-radius: 12px;
     border: 2px solid var(--cor-artista);
-    box-shadow: 0 0 15px var(--cor-artista), inset 0 0 10px rgba(0,0,0,0.5); /* Neon restaurado */
+    box-shadow: 0 0 15px var(--cor-artista);
     overflow: hidden;
     position: relative;
     transition: 0.3s ease;
@@ -146,19 +146,41 @@ h2 {
 
 .overlay-card span { font-weight: 700; font-size: 16px; text-align: center; text-shadow: 0 2px 4px #000; }
 
-.overlay-card a {
+/* BOTÃO DE PLAY ESTILIZADO YOUTUBE */
+.btn-play-yt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
-    background: var(--cor-artista);
-    color: #000;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
-    font-size: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
-    transition: 0.2s;
+    font-size: 13px;
+    border: 1px solid var(--cor-artista);
+    box-shadow: 0 0 10px var(--cor-artista);
+    transition: all 0.3s ease;
 }
 
-.overlay-card a:hover { transform: scale(1.1); filter: brightness(1.2); }
+.yt-icon {
+    width: 18px;
+    height: 18px;
+    fill: #FF0000;
+    transition: 0.3s ease;
+}
+
+.btn-play-yt:hover {
+    background: #FF0000;
+    color: #fff;
+    border-color: #FF0000;
+    box-shadow: 0 0 15px #FF0000;
+    transform: scale(1.1);
+}
+
+.btn-play-yt:hover .yt-icon {
+    fill: #fff;
+}
 
 /* BIOGRAFIAS */
 .secao-biografias { margin-top: 60px; text-align: center; position: relative; z-index: 2; }
@@ -185,7 +207,7 @@ h2 {
 .rodape { margin-top: 80px; padding: 25px; text-align: center; background: rgba(0,0,0,0.6); border-top: 2px solid #00E5FF; position: relative; z-index: 2; }
 .rodape span { color: #FF007F; font-weight: 700; }
 
-/* ADAPTAÇÃO PARA CELULAR */
+/* CELULAR */
 @media (max-width: 600px) {
     .lista-videos { flex-wrap: nowrap; overflow-x: auto; }
     .card-video { width: 250px; height: 150px; flex-shrink: 0; }
