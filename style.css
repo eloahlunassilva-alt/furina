@@ -6,17 +6,41 @@ html {
 body {
     background: linear-gradient(
         180deg, 
-        #002b30 0%,    /* Cor Yago (Azul Neon escurecido) */
-        #33001a 20%,   /* Cor Katseye (Rosa escurecido) */
-        #332b00 40%,   /* Cor 2zDinizz (Amarelo escurecido) */
-        #330a14 60%,   /* Cor Duquesa (Vermelho/Rosa escurecido) */
-        #062422 80%,   /* Cor Kamaitachi (Verde Água escurecido) */
-        #003322 100%   /* Cor Gabriel (Verde Menta escurecido) */
+        #002b30 0%,    
+        #33001a 20%,   
+        #332b00 40%,   
+        #330a14 60%,   
+        #062422 80%,   
+        #003322 100%   
     );
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
+    position: relative;
+}
+
+/* Emojis voando no fundo do site todo */
+body::before {
+    content: "🎤 ✨ 🔥 👑 🗡️ 🧠 🎵 ✨ 🎤 🔥";
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+    word-spacing: 40px;
+    line-height: 80px;
+    animation: voandoEmojis 12s infinite linear;
+}
+
+@keyframes voandoEmojis {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(30px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
 }
 
 /* --- DEFINIÇÃO DE CORES E ESTILOS DOS ARTISTAS --- */
@@ -112,6 +136,8 @@ h2 {
     scroll-margin-top: 90px;
     color: var(--cor-artista);
     text-shadow: 0 0 12px var(--cor-artista);
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes luzNeon {
@@ -119,42 +145,15 @@ h2 {
     100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4, 0 0 30px #FF00E4; }
 }
 
-/* --- VÍDEOS DOS ARTISTAS COM EMOJIS DE BRILHO NO FUNDO --- */
+/* --- VÍDEOS DOS ARTISTAS --- */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15px;
     padding: 20px;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.35);
-    border: 1.5px solid var(--cor-artista);
     position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 0 15px var(--cor-artista);
-}
-
-.lista-videos::before {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 28px;
-    opacity: 0.3;
-    animation: brilhoEmoji 3s infinite alternate ease-in-out;
-    pointer-events: none;
-    letter-spacing: 8px;
-}
-
-.videos-yago::before { content: "🎤 🎤 🎤"; }
-.videos-katseye::before { content: "✨ ✨ ✨"; }
-.videos-dinizz::before { content: "🔥 🔥 🔥"; }
-.videos-duquesa::before { content: "👑 👑 👑"; }
-.videos-kamaitachi::before { content: "🗡️ 🗡️ 🗡️"; }
-.videos-gabriel::before { content: "🧠 🧠 🧠"; }
-
-@keyframes brilhoEmoji {
-    0% { transform: translateY(0px) scale(0.9); opacity: 0.2; }
-    100% { transform: translateY(10px) scale(1.1); opacity: 0.5; }
+    z-index: 2;
 }
 
 iframe {
@@ -183,6 +182,8 @@ iframe:hover {
 .secao-biografias {
     margin-top: 60px;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .titulo-biografias {
@@ -227,6 +228,30 @@ iframe:hover {
     font-size: 14px;
     line-height: 1.6;
     color: #E0E0E0;
+}
+
+/* --- RODAPÉ PERSONALIZADO --- */
+.rodape {
+    margin-top: 80px;
+    padding: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 2px solid #00E5FF;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+.rodape p {
+    margin: 0;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.rodape span {
+    color: #FF007F;
+    font-weight: 700;
+    text-shadow: 0 0 10px #FF007F;
 }
 
 /* --- RESPONSIVIDADE (CELULAR) --- */
