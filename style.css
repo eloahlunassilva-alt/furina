@@ -34,7 +34,7 @@ body {
 
 .glitter-emojis span {
     position: absolute;
-    font-size: 24px;
+    font-size: 26px;
     opacity: 0.7;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
     animation: piscarEFlutuar 3s infinite alternate ease-in-out;
@@ -52,7 +52,7 @@ body {
     }
     100% {
         transform: translateY(-12px) scale(1.1);
-        opacity: 0.5;
+        opacity: 0.6;
         filter: drop-shadow(0 0 8px #ff007f);
     }
 }
@@ -156,7 +156,7 @@ h2 {
     100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4; }
 }
 
-/* --- CARTÕES DE VÍDEOS DE MÚSICA --- */
+/* --- CARTÕES COM CAPA DO VÍDEO NO FUNDO --- */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
@@ -168,44 +168,63 @@ h2 {
 }
 
 .card-video {
-    background: rgba(20, 20, 30, 0.85);
-    border: 2px solid var(--cor-artista);
+    width: 300px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
     border-radius: 12px;
-    padding: 15px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 10px var(--cor-artista);
+    border: 2px solid var(--cor-artista);
+    box-shadow: 0 0 12px var(--cor-artista);
+    overflow: hidden;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-video:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px var(--cor-artista);
+    box-shadow: 0 0 22px var(--cor-artista);
 }
 
-.card-video span {
-    font-weight: 600;
-    font-size: 15px;
+.overlay-card {
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+    transition: background 0.3s ease;
+}
+
+.card-video:hover .overlay-card {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay-card span {
+    font-weight: 700;
+    font-size: 16px;
     text-align: center;
-    margin-bottom: 12px;
     color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
-.card-video a {
+.overlay-card a {
     text-decoration: none;
     background-color: var(--cor-artista);
     color: #000000;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 20px;
     font-weight: bold;
     font-size: 13px;
-    transition: background-color 0.2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, filter 0.2s;
 }
 
-.card-video a:hover {
+.overlay-card a:hover {
+    transform: scale(1.1);
     filter: brightness(1.2);
 }
 
@@ -302,7 +321,8 @@ h2 {
     }
 
     .card-video {
-        width: 200px;
+        width: 250px;
+        height: 150px;
         flex-shrink: 0;
     }
 
