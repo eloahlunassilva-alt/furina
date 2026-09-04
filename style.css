@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- EFEITO GLITTER FLUTUANTE NO FUNDO --- */
+/* --- EFEITO GLITTER PISCANTE SEM MOVIMENTO DE QUEDA --- */
 .glitter-fundo {
     position: fixed;
     top: 0;
@@ -36,29 +36,31 @@ body {
 .glitter-fundo::after {
     content: "✦  .  ✧  ˚  ✨  .  ✦  .  ✧  ˚  ✨  .  ✦  .  ✧  ˚  ✨";
     position: absolute;
-    top: -100px;
+    top: 0;
     left: 0;
-    width: 200%;
-    height: 200%;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.45);
-    word-spacing: 50px;
-    line-height: 90px;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.5);
-    animation: brilhoGlitter 8s infinite linear;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.5);
+    word-spacing: 60px;
+    line-height: 110px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.6);
+    animation: piscarGlitter 3s infinite alternate ease-in-out;
 }
 
 .glitter-fundo::after {
     content: "✧  ˚  ✨  .  ✦  .  ✧  ˚  ✨  .  ✦  .  ✧  ˚  ✨  .  ✦";
-    color: rgba(255, 215, 0, 0.35); /* Toque de glitter dourado */
-    font-size: 16px;
-    animation: brilhoGlitter 12s infinite reverse linear;
+    color: rgba(255, 215, 0, 0.4); /* Glitter tom dourado */
+    font-size: 18px;
+    top: 30px;
+    left: 20px;
+    animation: piscarGlitter 2.2s infinite alternate-reverse ease-in-out;
 }
 
-@keyframes brilhoGlitter {
-    0% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-    50% { opacity: 0.8; }
-    100% { transform: translateY(100px) rotate(3deg); opacity: 0.3; }
+@keyframes piscarGlitter {
+    0% { opacity: 0.2; transform: scale(0.98); }
+    50% { opacity: 0.85; }
+    100% { opacity: 0.3; transform: scale(1.02); }
 }
 
 /* --- DEFINIÇÃO DE CORES E ESTILOS DOS ARTISTAS --- */
