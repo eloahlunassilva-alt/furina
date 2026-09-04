@@ -118,13 +118,42 @@ h2 {
     100% { color: #FF00E4; text-shadow: 0 0 15px #FF00E4, 0 0 30px #FF00E4; }
 }
 
-/* --- VÍDEOS DOS ARTISTAS --- */
+/* --- VÍDEOS DOS ARTISTAS COM EMOJIS DE BRILHO NO FUNDO --- */
 .lista-videos {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15px;
-    padding-left: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1.5px solid var(--cor-artista);
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px var(--cor-artista);
+}
+
+.lista-videos::before {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 28px;
+    opacity: 0.3;
+    animation: brilhoEmoji 3s infinite alternate ease-in-out;
+    pointer-events: none;
+    letter-spacing: 8px;
+}
+
+.videos-yago::before { content: "🎤 🎤 🎤"; }
+.videos-katseye::before { content: "✨ ✨ ✨"; }
+.videos-dinizz::before { content: "🔥 🔥 🔥"; }
+.videos-duquesa::before { content: "👑 👑 👑"; }
+.videos-kamaitachi::before { content: "🗡️ 🗡️ 🗡️"; }
+.videos-gabriel::before { content: "🧠 🧠 🧠"; }
+
+@keyframes brilhoEmoji {
+    0% { transform: translateY(0px) scale(0.9); opacity: 0.2; }
+    100% { transform: translateY(10px) scale(1.1); opacity: 0.5; }
 }
 
 iframe {
@@ -133,6 +162,7 @@ iframe {
     border-radius: 12px;
     border: 2px solid transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    z-index: 2;
 }
 
 .lista-videos iframe {
@@ -219,8 +249,7 @@ iframe:hover {
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-left: 10px;
-        padding-bottom: 15px;
+        padding: 15px;
     }
 
     iframe {
