@@ -19,12 +19,12 @@ body {
 }
 
 /* --- DEFINIÇÃO DE CORES E ESTILOS DOS ARTISTAS --- */
-.btn-yago, .yago, .videos-yago { --cor-artista: #00E5FF; }
-.btn-katseye, .katseye, .videos-katseye { --cor-artista: #FF007F; }
-.btn-dinizz, .dinizz, .videos-dinizz { --cor-artista: #FFD700; }
-.btn-duquesa, .duquesa, .videos-duquesa { --cor-artista: #FF3366; }
-.btn-kamaitachi, .kamaitachi, .videos-kamaitachi { --cor-artista: #20B2AA; }
-.btn-gabriel, .gabriel, .videos-gabriel { --cor-artista: #00FFAB; }
+.btn-yago, .yago, .videos-yago, .card-yago { --cor-artista: #00E5FF; }
+.btn-katseye, .katseye, .videos-katseye, .card-katseye { --cor-artista: #FF007F; }
+.btn-dinizz, .dinizz, .videos-dinizz, .card-dinizz { --cor-artista: #FFD700; }
+.btn-duquesa, .duquesa, .videos-duquesa, .card-duquesa { --cor-artista: #FF3366; }
+.btn-kamaitachi, .kamaitachi, .videos-kamaitachi, .card-kamaitachi { --cor-artista: #20B2AA; }
+.btn-gabriel, .gabriel, .videos-gabriel, .card-gabriel { --cor-artista: #00FFAB; }
 
 .yago { font-family: 'Bungee', cursive; font-size: 45px; text-transform: uppercase; animation: luzNeon 1.5s infinite alternate; }
 .katseye { font-family: 'Great Vibes', cursive; font-size: 48px; }
@@ -108,7 +108,7 @@ h2 {
     margin-bottom: 15px;
     text-align: left;
     padding-left: 20px;
-    scroll-margin-top: 90px; /* Resolve o problema do menu cobrir o título! */
+    scroll-margin-top: 90px;
     color: var(--cor-artista);
     text-shadow: 0 0 12px var(--cor-artista);
 }
@@ -148,6 +148,56 @@ iframe:hover {
     box-shadow: 0 0 20px var(--cor-artista);
 }
 
+/* --- SEÇÃO DE BIOGRAFIAS --- */
+.secao-biografias {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.titulo-biografias {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.container-biografias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-bio {
+    background-color: rgba(15, 15, 25, 0.85);
+    border: 2px solid var(--cor-artista);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 0 15px var(--cor-artista);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.card-bio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px var(--cor-artista);
+}
+
+.card-bio h3 {
+    color: var(--cor-artista);
+    margin-top: 0;
+    font-size: 22px;
+    text-shadow: 0 0 8px var(--cor-artista);
+}
+
+.card-bio p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #E0E0E0;
+}
+
 /* --- RESPONSIVIDADE (CELULAR) --- */
 @media (max-width: 600px) {
     body { padding: 10px; }
@@ -177,5 +227,9 @@ iframe:hover {
         width: 260px;
         height: 160px;
         flex-shrink: 0;
+    }
+
+    .card-bio {
+        width: 100%;
     }
 }
